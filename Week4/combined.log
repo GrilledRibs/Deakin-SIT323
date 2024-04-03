@@ -10,3 +10,13 @@
 {"level":"info","message":"Parameters 200 and 700 received for multiplication","service":"calculate-service"}
 {"level":"info","message":"Parameters 200 and 700 received for multiplication","service":"calculate-service"}
 {"level":"info","message":"Parameters 200 and 700 received for division","service":"calculate-service"}
+{"level":"info","message":"Parameters 800 and 400 received for addition","service":"calculate-service"}
+{"level":"info","message":"Parameters 800 and 400 received for subtraction","service":"calculate-service"}
+{"level":"info","message":"Parameters 800 and 400 received for multiplication","service":"calculate-service"}
+{"level":"info","message":"Parameters 800 and 400 received for division","service":"calculate-service"}
+{"level":"info","message":"Parameters 800 and 400 received for exponentiation","service":"calculate-service"}
+{"level":"info","message":"Parameters 8 and 4 received for exponentiation","service":"calculate-service"}
+{"level":"error","message":"n2 is incorrectly defined","service":"calculate-service"}
+{"level":"info","message":"Parameters 2 received for square root","service":"calculate-service"}
+{"level":"info","message":"Parameters 7 and 2 received for modulo","service":"calculate-service"}
+{"level":"info","message":"Parameters 8 and 2 received for modulo","service":"calculate-service"}

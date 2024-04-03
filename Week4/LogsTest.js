@@ -125,6 +125,78 @@ app.get("/div", (req,res)=>{
       res.status(500).json({statuscocde:500, msg: error.toString() })
     }
 });
+
+const expo = (n1,n2) => {
+  return n1**n2;
+}
+app.get("/expo", (req,res)=>{
+  try{
+  const n1= parseFloat(req.query.n1);
+  const n2=parseFloat(req.query.n2);
+  if(isNaN(n1)) {
+      logger.error("n1 is incorrectly defined");
+      throw new Error("n1 incorrectly defined");
+  }
+  if(isNaN(n2)) {
+      logger.error("n2 is incorrectly defined");
+      throw new Error("n2 incorrectly defined");
+  }
+  
+  logger.info('Parameters '+n1+' and '+n2+' received for exponentiation');
+  const result = expo(n1,n2);
+  res.status(200).json({statuscocde:200, data: result }); 
+  } catch(error) { 
+      console.error(error)
+      res.status(500).json({statuscocde:500, msg: error.toString() })
+    }
+});
+
+
+const squareRt = (n1) => {
+  return n1**(1/2);
+}
+app.get("/sqrt", (req,res)=>{
+  try{
+  const n1= parseFloat(req.query.n1);
+  if(isNaN(n1)) {
+      logger.error("n1 is incorrectly defined");
+      throw new Error("n1 incorrectly defined");
+  }
+  
+  logger.info('Parameters '+n1+' received for square root');
+  const result = squareRt(n1);
+  res.status(200).json({statuscocde:200, data: result }); 
+  } catch(error) { 
+      console.error(error)
+      res.status(500).json({statuscocde:500, msg: error.toString() })
+    }
+});
+
+const mod = (n1,n2) => {
+  return n1%n2;
+}
+app.get("/mod", (req,res)=>{
+  try{
+  const n1= parseFloat(req.query.n1);
+  const n2=parseFloat(req.query.n2);
+  if(isNaN(n1)) {
+      logger.error("n1 is incorrectly defined");
+      throw new Error("n1 incorrectly defined");
+  }
+  if(isNaN(n2)) {
+      logger.error("n2 is incorrectly defined");
+      throw new Error("n2 incorrectly defined");
+  }
+  
+  logger.info('Parameters '+n1+' and '+n2+' received for modulo');
+  const result = mod(n1,n2);
+  res.status(200).json({statuscocde:200, data: result }); 
+  } catch(error) { 
+      console.error(error)
+      res.status(500).json({statuscocde:500, msg: error.toString() })
+    }
+});
+
 const port=3040;
 app.listen(port,()=> {
     console.log("hello i'm listening to port"+port);
